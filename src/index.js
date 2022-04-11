@@ -11,6 +11,7 @@ import { composeWithDevTools } from "redux-devtools-extension"
 import thunk from "redux-thunk";
 import rootReducer from "./reducers"
 import { getPosts } from "./actions/post.action";
+import { getUser } from "./actions/user.action";
 
 
 const store = createStore(
@@ -18,6 +19,7 @@ const store = createStore(
     composeWithDevTools(applyMiddleware(thunk)))
 
 store.dispatch(getPosts())
+store.dispatch(getUser())
 
 
 
