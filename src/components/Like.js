@@ -2,6 +2,7 @@ import React from "react";
 import { useDispatch } from "react-redux";
 import { useSelector } from "react-redux";
 import { addLike } from "../actions/post.action";
+import { addUserLike } from "../actions/user.action";
 
 const Like = ({ post }) => {
 
@@ -22,6 +23,7 @@ const Like = ({ post }) => {
       id: user[0].id
     }
     dispatch(addLike(postData))
+    dispatch(addUserLike(userData))
   }
   return (
     <div onClick={handleLike}>
